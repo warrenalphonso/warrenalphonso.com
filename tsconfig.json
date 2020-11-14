@@ -1,29 +1,49 @@
 {
   "compilerOptions": {
-    "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
     "module": "esnext",
+    "allowJs": true, // Temporarily while I convert to TS
+    "checkJs": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "noEmit": true,
+    "skipLibCheck": true, // Don't lint declaration files
+    "target": "esnext",
+    "typeRoots": [
+      "./node_modules/@types/",
+      "./@types"
+    ],
+    // Strict checks
+    "noImplicitAny": true,
+    // alwaysStrict and strict do different things: https://stackoverflow.com/a/58868185/13697995
+    "alwaysStrict": true,
+    "strict": true,
+    // Module resolution
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./src/",
+    "esModuleInterop": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve"
+    "forceConsistentCasingInFileNames": true
   },
+  // According to https://www.typescriptlang.org/tsconfig#include, not 
+  // specifying file extension means onlny .ts, .tsx, and .d.ts are allowed, 
+  // and .js and .jsx if allowJs is true. 
+  // For some reason, .eslintrc.js doesns't match **/*.
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
+    "**/*",
+    // "next.config.js",
+    ".eslintrc.js"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "next.config.js",
+    "postcss.config.js",
+    "tailwind.config.js"
   ]
 }

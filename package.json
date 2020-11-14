@@ -13,14 +13,20 @@
   "dependencies": {
     "@mdx-js/loader": "^1.6.21",
     "@next/mdx": "^10.0.1",
+    "fontsource-source-sans-pro": "^3.0.9",
+    "fontsource-source-serif-pro": "^3.0.10",
     "next": "10.0.1",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "react-typography": "^0.16.19",
+    "typography": "^0.16.19",
+    "typography-theme-st-annes": "^0.16.19"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^3.0.0",
     "@types/node": "^14.14.7",
     "@types/react": "^16.9.56",
+    "@types/typography": "^0.16.3",
     "@typescript-eslint/eslint-plugin": "^4.7.0",
     "@typescript-eslint/parser": "^4.7.0",
     "autoprefixer": "^10.0.2",

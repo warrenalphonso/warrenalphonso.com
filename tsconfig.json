@@ -24,7 +24,7 @@
     "strict": true,
     // Module resolution
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "./src/",
+    "baseUrl": ".",
     "esModuleInterop": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,

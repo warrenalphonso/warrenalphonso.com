@@ -1,5 +1,6 @@
 import React from "react"
 import Head from "next/head"
+import Image from "next/image"
 
 const Home = (): JSX.Element => {
   return (
@@ -8,14 +9,24 @@ const Home = (): JSX.Element => {
         <title>Warren Alphonso</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Welcome</h1>
-
-      <p>
-        My name is Warren Alphonso. I&apos;m an undergrad EECS major at UC
-        Berkeley. Find me on{" "}
-        <a href="https://github.com/warrenalphonso">GitHub</a>. Reach me at
-        warrenalphonso <i>[at]</i> berkeley <i>[dot]</i> edu.
-      </p>
+      <div className="space-y-16">
+        <h1>Welcome</h1>
+        <div className="flex flex-col items-center">
+          <Image
+            src="/splash.jpg"
+            alt="Berkeley rooftop"
+            width={3662 / 4}
+            height={1827 / 4}
+            layout="intrinsic"
+          />
+        </div>
+        <p>
+          My name is Warren Alphonso. I&apos;m an undergrad EECS major at UC
+          Berkeley. Find me on{" "}
+          <a href="https://github.com/warrenalphonso">GitHub</a>. Reach me at
+          warrenalphonso <i>[at]</i> berkeley <i>[dot]</i> edu.
+        </p>
+      </div>
     </div>
   )
 }

@@ -9,4 +9,8 @@ module.exports = {
   },
   variants: {},
   plugins: [],
+  // To stop conflicting with Typography.js I think
+  corePlugins: {
+    preflight: false,
+  },
 }

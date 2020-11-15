@@ -4,12 +4,12 @@ import Image from "next/image"
 
 const Home = (): JSX.Element => {
   return (
-    <div>
+    <>
       <Head>
         <title>Warren Alphonso</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="space-y-16">
+      <div className="space-y-16 flex flex-1 flex-col">
         <h1>Welcome</h1>
         <div className="flex flex-col items-center">
           <Image
@@ -26,7 +26,7 @@ const Home = (): JSX.Element => {
           warrenalphonso <i>[at]</i> berkeley <i>[dot]</i> edu.
         </p>
       </div>
-    </div>
+    </>
   )
 }
 

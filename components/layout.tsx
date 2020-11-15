@@ -1,4 +1,5 @@
 import React from "react"
+import { useRouter } from "next/router"
 
 import Header from "components/header"
 import Footer from "components/footer"
@@ -8,10 +9,17 @@ type Props = {
 }
 
 const Layout = ({ children }: Props): JSX.Element => {
+  const { pathname } = useRouter()
+  const styles =
+    pathname === "/courses"
+      ? {
+          padding: "0 0",
+        }
+      : {}
   return (
     <div>
       <header>{<Header />}</header>
-      <main>{children}</main>
+      <main style={styles}>{children}</main>
       <footer>{<Footer />}</footer>
     </div>
   )

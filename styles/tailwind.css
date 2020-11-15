@@ -2,15 +2,17 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-html,
 body {
-  padding: 2rem 0;
+  background-color: #fff8f7; /* Just barelyyy not white */
+}
+
+main {
+  padding: 0 0; 
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #fff8f7; /* Just barelyyy not white */
 }
 
 a:hover {
@@ -19,4 +21,10 @@ a:hover {
 
 * {
   box-sizing: border-box;
+}
+
+@screen md {
+  main {
+    padding: 0 30%;
+  }
 }

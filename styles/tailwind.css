@@ -73,3 +73,31 @@ a:hover {
 .permalink-author {
   @apply text-2xl;
 }
+
+.reading-header {
+  padding: 14px;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.favorites {
+  background-color: #cfefaf;
+}
+
+.now-reading {
+  background-color: #b5dce8;
+}
+
+.finished {
+  background-color: #ffc8b2;
+}
+
+.anti-library {
+  background-color: #ffe766;
+}
+
+li > p {
+  margin-bottom: 0;
+}

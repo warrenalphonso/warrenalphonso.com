@@ -22,29 +22,43 @@ const Reading = ({ notes }: Props): JSX.Element => {
       </Head>
       <div>
         <h1>Reading</h1>
-        <ReadingList>
-          <ReadingItem contents={notes["test"]}>
+        <div className="reading-header favorites">
+          <p className="font-extrabold text-lg m-0">Favorites</p>
+        </div>
+        <ReadingList notes={notes}>
+          <ReadingItem slug="test">
             <i>HI</i> by Joe
           </ReadingItem>
-          <ReadingItem contents={notes["test"]}>
+          <ReadingItem slug="test">
             <i>HI</i> by Joe
           </ReadingItem>
-          <ReadingItem contents={notes["test"]}>
+          <ReadingItem slug="test">
             <i>HI</i> by Joe
           </ReadingItem>
         </ReadingList>
 
-        <ReadingList>
-          <ReadingItem contents={notes["test"]}>
+        <div className="reading-header now-reading">
+          <p className="font-extrabold text-lg m-0">Now Reading</p>
+        </div>
+        <ReadingList notes={notes}>
+          <ReadingItem slug="test">
             <i>HI</i> by Joe
           </ReadingItem>
-          <ReadingItem contents={notes["test"]}>
+          <ReadingItem slug="test">
             <i>HI</i> by Joe
           </ReadingItem>
-          <ReadingItem contents={notes["test"]}>
+          <ReadingItem slug="test">
             <i>HI</i> by Joe
           </ReadingItem>
         </ReadingList>
+      </div>
+
+      <div className="reading-header finished">
+        <p className="font-extrabold text-lg m-0">Finished</p>
+      </div>
+
+      <div className="reading-header anti-library">
+        <p className="font-extrabold text-lg m-0">Anti-Library</p>
       </div>
     </>
   )

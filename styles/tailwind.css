@@ -7,7 +7,7 @@ body {
 }
 
 main {
-  padding: 0 0; 
+  padding: 0 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -27,4 +27,23 @@ a:hover {
   main {
     padding: 0 30%;
   }
+}
+
+.navbar {
+  padding-right: 0;
+  @apply flex items-center justify-end flex-wrap pt-4;
+}
+
+@screen md {
+  .navbar {
+    padding-right: 30%;
+  }
+}
+
+.navlinks {
+  @apply text-red-700 pr-6;
+}
+
+.navlinks:hover {
+  @apply text-pink-400;
 }

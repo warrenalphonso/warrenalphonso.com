@@ -3,15 +3,14 @@ import Link from "next/link"
 
 const Header = (): JSX.Element => {
   return (
-    <div>
+    <nav className="navbar">
       <Link href="/">
-        <a>Home</a>
+        <a className="navlinks">Home</a>
       </Link>
-      <br />
       <Link href="/courses">
-        <a>Courses</a>
+        <a className="navlinks">Courses</a>
       </Link>
-    </div>
+    </nav>
   )
 }
 

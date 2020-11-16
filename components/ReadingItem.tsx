@@ -1,7 +1,16 @@
 import React from "react"
 
-const ReadingItem = (): JSX.Element => {
-  return <div></div>
+type Props = {
+  children: React.ReactNode
+  contents: string
+}
+
+const ReadingItem = ({ children, contents }: Props): JSX.Element => {
+  return (
+    <li>
+      <p>{children}</p>
+    </li>
+  )
 }
 
 export default ReadingItem

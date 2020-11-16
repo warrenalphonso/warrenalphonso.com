@@ -1,21 +1,28 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 import React from "react"
 import { GetStaticPaths, GetStaticProps } from "next"
+import dynamic from "next/dynamic"
 import fs from "fs"
-import path from "path"
-import matter from "gray-matter"
 
-import { Perma as PermaType } from "types/Perma.types"
+import { Frontmatter } from "types/Perma.types"
 
-type Props = PermaType & { content: string }
+type Props = {
+  slug: string
+}
 
-const Perma = ({
-  slug,
-  content,
-  title,
-  author,
-  dateAccessed,
-  url,
-}: Props): JSX.Element => {
+const Perma = ({ slug }: Props): JSX.Element => {
+  const {
+    title,
+    author,
+    dateAccessed,
+    url,
+  } = require(`content/perma/${slug}.mdx`).metadata as Frontmatter
+  try {
+    require(`content/perma/${slug}.mdx`)
+  } catch (err) {
+    throw new Error(`Path content/perma/${slug}.mdx doesn't exist!`)
+  }
+  const Content = dynamic(() => import(`content/perma/${slug}.mdx`))
   return (
     <div>
       <p className="permalink-title">
@@ -25,7 +32,7 @@ const Perma = ({
         <p className="permalink-author float-left">by {author}</p>
         <p>Date accessed: {dateAccessed}</p>
       </div>
-      {content}
+      <Content />
     </div>
   )
 }
@@ -35,15 +42,9 @@ export default Perma
 export const getStaticProps: GetStaticProps = async (context) => {
   if (context.params) {
     const { slug } = context?.params
-    const mdWithMetadata = fs.readFileSync(
-      path.join("content/perma", slug + ".md").toString()
-    )
-    const { data, content } = matter(mdWithMetadata)
     return {
       props: {
         slug,
-        content,
-        ...data,
       },
     }
   } else {
@@ -56,7 +57,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 export const getStaticPaths: GetStaticPaths = async () => {
   const files = fs.readdirSync(`${process.cwd()}/content/perma`)
   const paths = files.map((fn) => ({
-    params: { slug: fn.replace(".md", "") },
+    params: { slug: fn.replace(".mdx", "") },
   }))
   return {
     paths,

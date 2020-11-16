@@ -2,7 +2,7 @@
 // https://nextjs.org/docs/advanced-features/custom-app
 import React, { AppProps } from "next/app"
 
-import Layout from "components/layout"
+import Layout from "components/Layout"
 
 import "styles/tailwind.css"
 

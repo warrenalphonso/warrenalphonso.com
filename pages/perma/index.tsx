@@ -21,6 +21,10 @@ const PermaHome = ({ permas }: Props): JSX.Element => {
 
       <div>
         <h1>Permalinks</h1>
+        <p className="text-xl text-gray-700">
+          <span className="font-extrabold">Disclaimer: </span>None of the
+          content linked below is originally by me.
+        </p>
         {permas.map((perma) => {
           return (
             <p key={perma.title} className="permalink">

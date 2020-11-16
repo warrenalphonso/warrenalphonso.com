@@ -5,13 +5,13 @@ import Link from "next/link"
 import fs from "fs"
 import matter from "gray-matter"
 
-import { Perma as PermaType } from "types/Perma.types"
+import { Perma } from "types/Perma.types"
 
 type Props = {
-  permas: PermaType[]
+  permas: Perma[]
 }
 
-const Perma = ({ permas }: Props): JSX.Element => {
+const PermaHome = ({ permas }: Props): JSX.Element => {
   return (
     <>
       <Head>
@@ -22,11 +22,14 @@ const Perma = ({ permas }: Props): JSX.Element => {
       <div>
         <h1>Permalinks</h1>
         {permas.map((perma) => {
-          console.log(perma)
           return (
-            <Link key={perma.title} href={"/perma/" + perma.slug}>
-              <a>{perma.title}</a>
-            </Link>
+            <p key={perma.title} className="permalink">
+              <Link href={"/perma/" + perma.slug}>
+                <a>{perma.title}</a>
+              </Link>
+              <br />
+              by {perma.author}
+            </p>
           )
         })}
       </div>
@@ -34,18 +37,24 @@ const Perma = ({ permas }: Props): JSX.Element => {
   )
 }
 
-export default Perma
+export default PermaHome
 
 export const getStaticProps: GetStaticProps = async () => {
   const files = fs.readdirSync(`${process.cwd()}/content/perma`)
-  const permas = files.map((fn) => {
-    const mdWithMetadata = fs.readFileSync(`content/perma/${fn}`).toString()
-    const { data } = matter(mdWithMetadata)
-    return {
-      slug: fn.replace(".md", ""),
-      ...data,
-    }
-  })
+  const permas = files
+    .map((fn) => {
+      const mdWithMetadata = fs.readFileSync(`content/perma/${fn}`).toString()
+      const { data } = matter(mdWithMetadata)
+
+      return {
+        slug: fn.replace(".md", ""),
+        ...data,
+      } as Perma
+    })
+    .sort((a, b) => {
+      // Convert date string to Date
+      return new Date(a.dateAccessed) > new Date(b.dateAccessed) ? -1 : 1
+    })
   return {
     props: {
       permas,

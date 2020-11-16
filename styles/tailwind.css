@@ -19,6 +19,10 @@ body {
   width: 100%;
 }
 
+a {
+  color: #fb251b;
+}
+
 a:hover {
   @apply underline;
 }
@@ -56,4 +60,16 @@ a:hover {
 
 .navlinks:hover {
   @apply text-pink-400;
+}
+
+.permalink {
+  @apply pb-8;
+}
+
+.permalink-title {
+  @apply text-4xl;
+}
+
+.permalink-author {
+  @apply text-2xl;
 }

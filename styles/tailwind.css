@@ -101,3 +101,7 @@ a:hover {
 li > p {
   margin-bottom: 0;
 }
+
+.no-upper-margin > * {
+  margin-top: 0;
+}

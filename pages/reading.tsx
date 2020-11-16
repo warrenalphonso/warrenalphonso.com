@@ -32,6 +32,7 @@ const Reading = ({ notes }: Props): JSX.Element => {
           <ReadingItem slug="test">
             <i>HI</i> by Joe
           </ReadingItem>
+          <ReadingItem slug="new">HI THERE by Joe</ReadingItem>
           <ReadingItem slug="test">
             <i>HI</i> by Joe
           </ReadingItem>

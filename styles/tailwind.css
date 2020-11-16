@@ -6,13 +6,17 @@ body {
   background-color: #fff8f7; /* Just barelyyy not white */
 }
 
-main {
+body {
   padding: 0 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#__next {
+  width: 100%;
 }
 
 a:hover {
@@ -23,8 +27,14 @@ a:hover {
   box-sizing: border-box;
 }
 
-@screen md {
-  main {
+@screen lg {
+  body {
+    padding: 0 20%;
+  }
+}
+
+@screen xl {
+  body {
     padding: 0 30%;
   }
 }
@@ -36,7 +46,7 @@ a:hover {
 
 @screen md {
   .navbar {
-    padding-right: 30%;
+    /* padding-right: 30%; */
   }
 }
 

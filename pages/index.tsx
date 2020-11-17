@@ -1,6 +1,6 @@
 import React from "react"
 import Head from "next/head"
-import Image from "next/image"
+// import Image from "next/image"
 
 const Home = (): JSX.Element => {
   return (
@@ -15,8 +15,10 @@ const Home = (): JSX.Element => {
           <img
             src="/splash.jpg"
             alt="Berkeley rooftop"
-            width={3662 / 5}
-            height={1827 / 5}
+            width="90%"
+            height="auto"
+            // width={3662 / 5}
+            // height={1827 / 5}
             // layout="intrinsic"
           />
         </div>

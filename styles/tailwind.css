@@ -15,7 +15,7 @@ body {
   align-items: center;
 }
 
-#__next {
+body > * {
   width: 100%;
 }
 

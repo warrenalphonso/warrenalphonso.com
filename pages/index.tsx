@@ -12,12 +12,12 @@ const Home = (): JSX.Element => {
       <div className="space-y-16 flex flex-1 flex-col">
         <h1>Welcome</h1>
         <div className="flex flex-col items-center">
-          <Image
+          <img
             src="/splash.jpg"
             alt="Berkeley rooftop"
             width={3662 / 5}
             height={1827 / 5}
-            layout="intrinsic"
+            // layout="intrinsic"
           />
         </div>
         <p>

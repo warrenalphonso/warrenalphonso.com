@@ -1,7 +1,5 @@
-import React from "react"
+import React, { useState } from "react"
 import dynamic from "next/dynamic"
-
-import { useReadingState } from "components/ReadingContext"
 
 type Props = {
   children: React.ReactNode
@@ -16,17 +14,17 @@ const ReadingItem = ({ children, slug }: Props): JSX.Element => {
   }
   const Notes = dynamic(() => import(`content/reading/${slug}.mdx`))
 
-  const { openSlugs, toggle } = useReadingState()
+  const [open, setOpen] = useState(false)
   return (
     <li>
       <p>
         {children}{" "}
-        <a onClick={() => toggle(slug)} className="cursor-pointer">
-          {!openSlugs.includes(slug) ? "[+]" : "[-]"}
+        <a onClick={() => setOpen(!open)} className="cursor-pointer">
+          {open ? "[-]" : "[+]"}
         </a>
       </p>
       <br />
-      {openSlugs.includes(slug) ? (
+      {open ? (
         <div className="text-sm no-upper-margin">
           <Notes />
         </div>

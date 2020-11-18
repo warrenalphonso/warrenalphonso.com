@@ -102,6 +102,7 @@ li > p {
   margin-bottom: 0;
 }
 
-.no-upper-margin > * {
+.notes > * {
   margin-top: 0;
+  @apply mb-2;
 }

@@ -3,29 +3,33 @@ import dynamic from "next/dynamic"
 
 type Props = {
   children: React.ReactNode
-  slug: string
+  slug?: string
 }
 
 const ReadingItem = ({ children, slug }: Props): JSX.Element => {
-  try {
-    require(`content/reading/${slug}.mdx`)
-  } catch (err) {
-    throw new Error(`Path content/reading/${slug}.mdx doesn't exist!`)
+  if (slug) {
+    try {
+      require(`content/reading/${slug}.mdx`)
+    } catch (err) {
+      throw new Error(`Path content/reading/${slug}.mdx doesn't exist!`)
+    }
   }
-  const Notes = dynamic(() => import(`content/reading/${slug}.mdx`))
+  const Notes = slug && dynamic(() => import(`content/reading/${slug}.mdx`))
 
   const [open, setOpen] = useState(false)
   return (
     <li>
       <p>
         {children}{" "}
-        <a onClick={() => setOpen(!open)} className="cursor-pointer">
-          {open ? "[-]" : "[+]"}
-        </a>
+        {slug ? (
+          <a onClick={() => setOpen(!open)} className="cursor-pointer">
+            {open ? "[-]" : "[+]"}
+          </a>
+        ) : null}
       </p>
-      <br />
-      {open ? (
-        <div className="text-sm no-upper-margin">
+      {slug && Notes && open ? (
+        <div className="text-sm notes">
+          <br />
           <Notes />
         </div>
       ) : null}

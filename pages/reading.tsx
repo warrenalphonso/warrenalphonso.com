@@ -89,10 +89,10 @@ const Reading = (): JSX.Element => {
         </ReadingList>
 
         {/* 
-          FINISHED
+          ENJOYED
         */}
-        <div className="reading-header finished">
-          <p className="font-extrabold text-lg m-0">Finished</p>
+        <div className="reading-header enjoyed">
+          <p className="font-extrabold text-lg m-0">Enjoyed</p>
         </div>
         <ReadingList>
           <ReadingItem>&quot;When We Build&quot; by Wilson Miner</ReadingItem>
@@ -206,6 +206,26 @@ const Reading = (): JSX.Element => {
           </ReadingItem>
           <ReadingItem>
             <i>Principles</i> by Ray Dalio
+          </ReadingItem>
+          <ReadingItem>
+            <i>Why Liberalism Failed</i> by Patrick Deneen
+          </ReadingItem>
+          <ReadingItem>
+            <i>Should We Eat Meat?</i> by Vaclav Smil
+          </ReadingItem>
+          <ReadingItem>
+            <i>The Better Angels of Our Nature: Why Violence Has Declined</i> by
+            Steven Pinker
+          </ReadingItem>
+          <ReadingItem>
+            <i>The Ode Less Travelled</i> by Stephen Fry
+          </ReadingItem>
+          <ReadingItem>
+            <i>Metaphors We Live By</i> by George Lakoff and Mark Johnson
+          </ReadingItem>
+          <ReadingItem>
+            <i>A Sense of Where You Are: Bill Bradley at Princeton</i> by John
+            McPhee
           </ReadingItem>
           <ReadingItem>
             <i>Models</i> by Mark Manson

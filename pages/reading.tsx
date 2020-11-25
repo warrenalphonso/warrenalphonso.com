@@ -194,6 +194,26 @@ const Reading = (): JSX.Element => {
         </div>
         <ReadingList>
           <ReadingItem>
+            <i>The Medusa and the Snail</i> by Lewis Thomas
+          </ReadingItem>
+          <ReadingItem>
+            <i>The Blind Watchmaker</i> by Richard Dawkins
+          </ReadingItem>
+          <ReadingItem>
+            <i>The Machinery of Life</i> by David Goodsell
+          </ReadingItem>
+          <ReadingItem>
+            <i>A Computer Scientist&apos;s Guide to Cell Biology</i> by William
+            Cohen
+          </ReadingItem>
+          <ReadingItem>
+            <i>
+              The Eighth Day of Creation: The Makers of the Revolution in
+              Biology
+            </i>{" "}
+            by Horace Freeland Judson
+          </ReadingItem>
+          <ReadingItem>
             <i>The Evolving Self: Problem and Process in Human Development</i>{" "}
             by Robert Kegan
           </ReadingItem>

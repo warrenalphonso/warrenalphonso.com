@@ -89,10 +89,10 @@ const Reading = (): JSX.Element => {
         </ReadingList>
 
         {/* 
-          FINISHED
+          ENJOYED
         */}
-        <div className="reading-header finished">
-          <p className="font-extrabold text-lg m-0">Finished</p>
+        <div className="reading-header enjoyed">
+          <p className="font-extrabold text-lg m-0">Enjoyed</p>
         </div>
         <ReadingList>
           <ReadingItem>&quot;When We Build&quot; by Wilson Miner</ReadingItem>
@@ -115,14 +115,10 @@ const Reading = (): JSX.Element => {
             &quot;Shut up and do the impossible&quot; by Eliezer Yudkowsky
           </ReadingItem>
           <ReadingItem>
-            &quot;I Wasn&apos;t Prepared to Work&quot; by Robert Smith
-          </ReadingItem>
-          <ReadingItem>
-            <i>Quantum Mechanics: The Theoretical Minimum</i> by Leonard
-            Susskind and Art Friedman
-          </ReadingItem>
-          <ReadingItem>
-            &quot;Becoming a magician&quot; by Autotranslucence
+            <Link href="/perma/i-wasnt-prepared-to-work">
+              <a>&quot;I Wasn&apos;t Prepared to Work&quot;</a>
+            </Link>{" "}
+            by Robert Smith
           </ReadingItem>
           <ReadingItem>
             &quot;The Fable of the Dragon-Tyrant&quot; by Nick Bostrom
@@ -144,14 +140,12 @@ const Reading = (): JSX.Element => {
             <i>Ego is the Enemy</i> by Ryan Holiday
           </ReadingItem>
           <ReadingItem>
-            <i>The Rosie Project</i> by Graeme Simsion
+            <i>The Rosie Project</i> and <i>The Rosie Effect</i> by Graeme
+            Simsion
           </ReadingItem>
           <ReadingItem>
             &quot;Speed matters: Why working quickly is more important than it
             seems&quot; by James Somers
-          </ReadingItem>
-          <ReadingItem>
-            <i>The Rosie Effect</i> by Graeme Simsion
           </ReadingItem>
           <ReadingItem>
             &quot;Principles of Effective Research&quot; by Michael Nielsen
@@ -164,9 +158,6 @@ const Reading = (): JSX.Element => {
           </ReadingItem>
           <ReadingItem>
             <i>Early Retirement Extreme</i> by Jacob Lund Fisker
-          </ReadingItem>
-          <ReadingItem>
-            &quot;How to Understand Things&quot; by Nabeel Qureshi
           </ReadingItem>
           <ReadingItem>
             <i>The Precipice: Existential Risk and the Future of Humanity</i> by
@@ -214,6 +205,9 @@ const Reading = (): JSX.Element => {
             by Horace Freeland Judson
           </ReadingItem>
           <ReadingItem>
+            <i>Lustrum</i> and <i>Dictator</i> by Robert Harris
+          </ReadingItem>
+          <ReadingItem>
             <i>The Evolving Self: Problem and Process in Human Development</i>{" "}
             by Robert Kegan
           </ReadingItem>
@@ -232,6 +226,26 @@ const Reading = (): JSX.Element => {
           </ReadingItem>
           <ReadingItem>
             <i>Principles</i> by Ray Dalio
+          </ReadingItem>
+          <ReadingItem>
+            <i>Why Liberalism Failed</i> by Patrick Deneen
+          </ReadingItem>
+          <ReadingItem>
+            <i>Should We Eat Meat?</i> by Vaclav Smil
+          </ReadingItem>
+          <ReadingItem>
+            <i>The Better Angels of Our Nature: Why Violence Has Declined</i> by
+            Steven Pinker
+          </ReadingItem>
+          <ReadingItem>
+            <i>The Ode Less Travelled</i> by Stephen Fry
+          </ReadingItem>
+          <ReadingItem>
+            <i>Metaphors We Live By</i> by George Lakoff and Mark Johnson
+          </ReadingItem>
+          <ReadingItem>
+            <i>A Sense of Where You Are: Bill Bradley at Princeton</i> by John
+            McPhee
           </ReadingItem>
           <ReadingItem>
             <i>Models</i> by Mark Manson

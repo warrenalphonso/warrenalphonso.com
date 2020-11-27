@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 import React from "react"
+import Head from "next/head"
 import { GetStaticPaths, GetStaticProps } from "next"
 import dynamic from "next/dynamic"
 import fs from "fs"
@@ -24,16 +25,22 @@ const Perma = ({ slug }: Props): JSX.Element => {
   }
   const Content = dynamic(() => import(`content/perma/${slug}.mdx`))
   return (
-    <div>
-      <p className="permalink-title">
-        <a href={url}>{title}</a>
-      </p>
-      <div className="flex items-end justify-between">
-        <p className="permalink-author float-left">by {author}</p>
-        <p>Date accessed: {dateAccessed}</p>
+    <>
+      <Head>
+        <title>{title} | Warren Alphonso</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div>
+        <p className="permalink-title">
+          <a href={url}>{title}</a>
+        </p>
+        <div className="flex items-end justify-between">
+          <p className="permalink-author float-left">by {author}</p>
+          <p>Date accessed: {dateAccessed}</p>
+        </div>
+        <Content />
       </div>
-      <Content />
-    </div>
+    </>
   )
 }
 

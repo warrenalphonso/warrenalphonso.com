@@ -35,7 +35,9 @@ const Reading = (): JSX.Element => {
           <ReadingItem>
             <i>The Way to Love</i> by Anthony De Mello
           </ReadingItem>
-          <ReadingItem>Scott Alexander&apos;s posts</ReadingItem>
+          <ReadingItem slug="scott-alexander">
+            Scott Alexander&apos;s posts
+          </ReadingItem>
           <ReadingItem>
             <Link href="/perma/the-one">
               <a>

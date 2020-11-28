@@ -36,7 +36,7 @@ const Reading = (): JSX.Element => {
             <i>The Way to Love</i> by Anthony De Mello
           </ReadingItem>
           <ReadingItem>Scott Alexander&apos;s posts</ReadingItem>
-          <ReadingItem slug="the-one">
+          <ReadingItem>
             <Link href="/perma/the-one">
               <a>
                 &quot;Read This If You&apos;re Worried That You&apos;ll Never
@@ -49,10 +49,7 @@ const Reading = (): JSX.Element => {
             &quot;Humans are not automatically strategic&quot; by Anna Salamon
           </ReadingItem>
           <ReadingItem>
-            <Link href="/perma/meaning-and-writing">
-              <a>&quot;Thoughts on Meaning and Writing&quot;</a>
-            </Link>{" "}
-            by Dormin
+            &quot;Thoughts on Meaning and Writing&quot; by Dormin
           </ReadingItem>
           <ReadingItem>&quot;If&quot; by Rudyard Kipling</ReadingItem>
         </ReadingList>
@@ -75,10 +72,7 @@ const Reading = (): JSX.Element => {
             <i>Rationality: From AI to Zombies</i> by Eliezer Yudkowsky
           </ReadingItem>
           <ReadingItem>
-            <Link href="/perma/principled-decision-making">
-              <a>&quot;Principled Decision Making&quot;</a>
-            </Link>{" "}
-            by Stepan Parunashvili
+            &quot;Principled Decision Making&quot; by Stepan Parunashvili
           </ReadingItem>
           <ReadingItem>
             <i>The Red Queen</i> by Matt Ridley

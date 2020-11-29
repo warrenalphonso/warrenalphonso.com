@@ -54,6 +54,12 @@ const Reading = (): JSX.Element => {
             &quot;Thoughts on Meaning and Writing&quot; by Dormin
           </ReadingItem>
           <ReadingItem>&quot;If&quot; by Rudyard Kipling</ReadingItem>
+          <ReadingItem>
+            <a href="https://radimentary.wordpress.com/2020/10/26/is-success-the-enemy-of-freedom-full/">
+              &quot;Is Success the Enemy of Freedom?&quot;
+            </a>{" "}
+            by Xiaoyu He
+          </ReadingItem>
         </ReadingList>
 
         {/* 
@@ -81,6 +87,12 @@ const Reading = (): JSX.Element => {
           </ReadingItem>
           <ReadingItem>
             <i>How to Change Your Mind</i> by Michael Pollan
+          </ReadingItem>
+          <ReadingItem>
+            <i>Status Anxiety</i> by Alain de Botton
+          </ReadingItem>
+          <ReadingItem>
+            <i>How to Think More about Sex</i> by Alain de Botton
           </ReadingItem>
         </ReadingList>
 
@@ -180,6 +192,12 @@ const Reading = (): JSX.Element => {
           <p className="font-extrabold text-lg m-0">Anti-Library</p>
         </div>
         <ReadingList>
+          <ReadingItem>
+            <i>So You&apos;ve Been Publicly Shamed</i> by Jon Ronson
+          </ReadingItem>
+          <ReadingItem>
+            <i>Perennial Seller</i> by Ryan Holiday
+          </ReadingItem>
           <ReadingItem>
             <i>The Medusa and the Snail</i> by Lewis Thomas
           </ReadingItem>

@@ -43,6 +43,8 @@ a:hover {
   }
 }
 
+/* NAVBAR */
+
 .navbar {
   padding-right: 0;
   @apply flex items-center justify-end flex-wrap pt-4;
@@ -62,6 +64,8 @@ a:hover {
   @apply text-pink-400;
 }
 
+/* PERMA */
+
 .permalink {
   @apply pb-8;
 }
@@ -73,6 +77,8 @@ a:hover {
 .permalink-author {
   @apply text-2xl;
 }
+
+/* READING */
 
 .reading-header {
   padding: 14px;
@@ -105,4 +111,29 @@ li > p {
 .notes > * {
   margin-top: 0;
   @apply mb-2;
+}
+
+/* SYNTAX HIGHLIGHTING */
+/* FROM: https://github.com/FormidableLabs/prism-react-renderer */
+.code-pre {
+  text-align: left;
+  margin: 1em 0;
+  padding: 0.5em;
+  overflow: scroll;
+}
+
+.code-line {
+  display: table-row;
+}
+
+.code-line-number {
+  display: table-cell;
+  text-align: right;
+  padding-right: 1em;
+  user-select: none;
+  opacity: 0.5;
+}
+
+.code-line-content {
+  display: table-cell;
 }

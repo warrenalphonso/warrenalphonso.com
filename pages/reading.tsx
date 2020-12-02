@@ -193,6 +193,9 @@ const Reading = (): JSX.Element => {
         </div>
         <ReadingList>
           <ReadingItem>
+            <i>Enemies of Promise</i> by Cyril Connolly
+          </ReadingItem>
+          <ReadingItem>
             <i>So You&apos;ve Been Publicly Shamed</i> by Jon Ronson
           </ReadingItem>
           <ReadingItem>

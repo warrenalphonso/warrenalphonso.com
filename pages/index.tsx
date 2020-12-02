@@ -1,6 +1,5 @@
 import React from "react"
 import Head from "next/head"
-// import Image from "next/image"
 
 const Home = (): JSX.Element => {
   return (
@@ -17,9 +16,6 @@ const Home = (): JSX.Element => {
             alt="Berkeley rooftop"
             width="90%"
             height="auto"
-            // width={3662 / 5}
-            // height={1827 / 5}
-            // layout="intrinsic"
           />
         </div>
         <p>

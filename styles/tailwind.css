@@ -10,7 +10,6 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #fff8f7; /* Just barelyyy not white */
-  zoom: 0.8; /* Just looks much better imo */
 }
 
 body > * {

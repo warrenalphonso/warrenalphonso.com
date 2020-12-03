@@ -55,10 +55,7 @@ const Reading = (): JSX.Element => {
           </ReadingItem>
           <ReadingItem>&quot;If&quot; by Rudyard Kipling</ReadingItem>
           <ReadingItem>
-            <a href="https://radimentary.wordpress.com/2020/10/26/is-success-the-enemy-of-freedom-full/">
-              &quot;Is Success the Enemy of Freedom?&quot;
-            </a>{" "}
-            by Xiaoyu He
+            &quot;Is Success the Enemy of Freedom?&quot; by Xiaoyu He
           </ReadingItem>
         </ReadingList>
 

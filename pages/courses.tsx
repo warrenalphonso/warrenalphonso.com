@@ -1,8 +1,16 @@
 import React from "react"
 import Head from "next/head"
-import { useTable } from "react-table"
+import { Column, useTable } from "react-table"
 
-const columns = [
+// From: https://github.com/tannerlinsley/react-table/discussions/2664#discussioncomment-92392
+interface Class {
+  sem: string
+  id: string
+  name: string
+  inst: string
+}
+
+const columns: Column<Class>[] = [
   {
     Header: "Semester",
     accessor: "sem",
@@ -21,7 +29,7 @@ const columns = [
   },
 ]
 
-const data = [
+const data: Array<{ sem: string; id: string; name: string; inst: string }> = [
   {
     sem: "Fall 2018",
     id: "CS 61A",
@@ -163,7 +171,7 @@ const Courses = (): JSX.Element => {
     headerGroups,
     rows,
     prepareRow,
-  } = useTable({ columns, data })
+  } = useTable<Class>({ columns, data })
 
   return (
     <>
@@ -181,13 +189,13 @@ const Courses = (): JSX.Element => {
           <thead>
             {headerGroups.map((headerGroup, i) => (
               <tr
-                key={`Header group ${i}`}
                 {...headerGroup.getHeaderGroupProps()}
+                key={`Header group ${i}`}
               >
                 {headerGroup.headers.map((column, j) => (
                   <th
-                    key={`Header ${i} ${j}`}
                     {...column.getHeaderProps()}
+                    key={`Header ${i} ${j}`}
                     style={{
                       color: "black",
                       fontWeight: "bold",
@@ -203,12 +211,12 @@ const Courses = (): JSX.Element => {
             {rows.map((row, i) => {
               prepareRow(row)
               return (
-                <tr key={`Row ${i}`} {...row.getRowProps()}>
+                <tr {...row.getRowProps()} key={`Row ${i}`}>
                   {row.cells.map((cell, j) => {
                     return (
                       <td
-                        key={`Item ${i} ${j}`}
                         {...cell.getCellProps()}
+                        key={`Item ${i} ${j}`}
                         style={{
                           padding: "10px",
                         }}

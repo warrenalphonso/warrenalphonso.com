@@ -1,5 +1,4 @@
 import React from "react"
-import { useRouter } from "next/router"
 import { MDXProvider } from "@mdx-js/react"
 
 import Header from "components/Header"
@@ -11,14 +10,6 @@ type Props = {
 }
 
 const Layout = ({ children }: Props): JSX.Element => {
-  const { pathname } = useRouter()
-  const styles =
-    pathname === "/courses"
-      ? {
-          padding: "0 0",
-        }
-      : {}
-
   return (
     <div>
       <header>{<Header />}</header>
@@ -30,7 +21,7 @@ const Layout = ({ children }: Props): JSX.Element => {
           },
         }}
       >
-        <main style={styles}>{children}</main>
+        <main>{children}</main>
       </MDXProvider>
       <footer>{<Footer />}</footer>
     </div>

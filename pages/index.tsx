@@ -8,7 +8,7 @@ const Home = (): JSX.Element => {
         <title>Warren Alphonso</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="space-y-16 flex flex-1 flex-col">
+      <div className="space-y-8 flex flex-1 flex-col">
         <h1>Welcome</h1>
         <div className="flex flex-col items-center">
           <img
@@ -23,6 +23,14 @@ const Home = (): JSX.Element => {
           <a href="https://github.com/warrenalphonso">GitHub</a>. Reach me at
           warrenalphonso <i>[at]</i> berkeley <i>[dot]</i> edu.
         </p>
+        <div className="space-y-0">
+          <h2>Projects</h2>
+          <h3>
+            <a href="https://warrenalphonso.github.io/qc/hubbard">
+              Investigating the Hubbard model with variational algorithms
+            </a>
+          </h3>
+        </div>
       </div>
     </>
   )

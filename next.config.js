@@ -3,12 +3,13 @@
 // See: https://www.npmjs.com/package/remark-math
 const remarkMath = require("remark-math")
 const rehypeKatex = require("rehype-katex")
+const remarkFootnotes = require("remark-footnotes")
 
 // From MDX Next.js guide: https://mdxjs.com/getting-started/next
 const withMDX = require("@next/mdx")({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [remarkMath],
+    remarkPlugins: [remarkMath, remarkFootnotes],
     rehypePlugins: [rehypeKatex],
   },
 })

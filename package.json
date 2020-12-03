@@ -22,6 +22,7 @@
     "react-table": "^7.6.2",
     "react-typography": "^0.16.19",
     "rehype-katex": "^4.0.0",
+    "remark-footnotes": "2.0.0",
     "remark-math": "3.0.1",
     "typography": "^0.16.19",
     "typography-theme-st-annes": "^0.16.19"

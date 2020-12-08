@@ -180,6 +180,12 @@ const Reading = (): JSX.Element => {
           <ReadingItem>
             <i>A Woman in Berlin</i> by Anonymous
           </ReadingItem>
+          <ReadingItem>
+            <Link href="/perma/best-general-advice">
+              <a>&quot;The best general advice on earth&quot;</a>
+            </Link>{" "}
+            by James Somers
+          </ReadingItem>
         </ReadingList>
 
         {/* 

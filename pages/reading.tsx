@@ -186,6 +186,9 @@ const Reading = (): JSX.Element => {
             </Link>{" "}
             by James Somers
           </ReadingItem>
+          <ReadingItem>
+            &quot;I should have loved biology&quot; by James Somers
+          </ReadingItem>
         </ReadingList>
 
         {/* 

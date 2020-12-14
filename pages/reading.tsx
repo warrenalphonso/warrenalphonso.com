@@ -189,6 +189,23 @@ const Reading = (): JSX.Element => {
           <ReadingItem>
             &quot;I should have loved biology&quot; by James Somers
           </ReadingItem>
+          <ReadingItem>
+            <a href="https://www.nature.com/articles/436150a">
+              &quot;What&apos;s expected of us&quot;
+            </a>
+            ,{" "}
+            <a href="https://www.multivax.com/last_question.html">
+              &quot;The last question&quot;
+            </a>
+            ,{" "}
+            <a href="http://www.galactanet.com/oneoff/theegg_mod.html">
+              &quot;The egg&quot;
+            </a>
+            , and{" "}
+            <a href="https://www.tor.com/2010/08/05/divided-by-infinity/">
+              &quot;Divided by infinity&quot;
+            </a>
+          </ReadingItem>
         </ReadingList>
 
         {/* 
@@ -199,10 +216,16 @@ const Reading = (): JSX.Element => {
         </div>
         <ReadingList>
           <ReadingItem>
+            <i>Physics from Symmetry</i> by Jakob Schwichtenberg
+          </ReadingItem>
+          <ReadingItem>
             <i>Enemies of Promise</i> by Cyril Connolly
           </ReadingItem>
           <ReadingItem>
             <i>So You&apos;ve Been Publicly Shamed</i> by Jon Ronson
+          </ReadingItem>
+          <ReadingItem>
+            <i>12 Rules for Life</i> by Jordan Peterson
           </ReadingItem>
           <ReadingItem>
             <i>Perennial Seller</i> by Ryan Holiday
@@ -326,8 +349,7 @@ const Reading = (): JSX.Element => {
             Hofstadter
           </ReadingItem>
           <ReadingItem>
-            <i>The End of Time: The Next Revolution in Physics</i> by Julian
-            Barbour
+            <i>The Years of Lyndon Johnson: The Path to Power</i> by Robert Caro
           </ReadingItem>
           <ReadingItem>
             <i>Only Words</i> by Catherine MacKinnon
@@ -360,10 +382,7 @@ const Reading = (): JSX.Element => {
             <i>The Sense of Style</i> by Steven Pinker
           </ReadingItem>
           <ReadingItem>
-            <i>ANSI Common Lisp</i> by Paul Graham
-          </ReadingItem>
-          <ReadingItem>
-            <i>Ideas and Opinions</i> by Einstein
+            <i>Ideas and Opinions</i> by Albert Einstein
           </ReadingItem>
           <ReadingItem>
             <i>Einstein: His Life and Universe</i> by Walter Isaacson
@@ -379,15 +398,6 @@ const Reading = (): JSX.Element => {
           </ReadingItem>
           <ReadingItem>
             <i>Story of Philosophy</i> by Will Durant
-          </ReadingItem>
-          <ReadingItem>
-            <i>The Art of Profitability</i> by Adrian Slywotzky
-          </ReadingItem>
-          <ReadingItem>
-            <i>E-Myth Revisited</i> by Michael Gerber (1!)
-          </ReadingItem>
-          <ReadingItem>
-            <i>The Ultimate Sales Machine</i> by Chet Holmes (2!)
           </ReadingItem>
           <ReadingItem>
             <i>On Writing Well</i> by William Zinsser
@@ -408,12 +418,6 @@ const Reading = (): JSX.Element => {
             <i>The Man Who Loved Only Numbers</i> by Paul Hoffman
           </ReadingItem>
           <ReadingItem>
-            <i>The Four Steps to the Epiphany</i> by Steve Blank
-          </ReadingItem>
-          <ReadingItem>
-            <i>The Innovator&apos;s Solution</i> by Clayton Christensen
-          </ReadingItem>
-          <ReadingItem>
             <i>Autobiography of a Yogi</i> by Paramahansa Yogananda
           </ReadingItem>
           <ReadingItem>
@@ -429,13 +433,6 @@ const Reading = (): JSX.Element => {
           <ReadingItem>
             <i>The Elements of Style [Illustrated]</i> by William Strunk Jr.,
             E.B. White, and Maira Kalman
-          </ReadingItem>
-          <ReadingItem>
-            <i>Man: The Moral Animal</i> by Robert Wright
-          </ReadingItem>
-          <ReadingItem>
-            <i>The Adapted Mind</i> by Jerome Barker, Leda Cosmides, and John
-            Tooby
           </ReadingItem>
           <ReadingItem>
             <i>Handbook of the Biology of Aging, Eigth Edition</i> by Matt

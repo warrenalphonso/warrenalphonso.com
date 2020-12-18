@@ -219,6 +219,21 @@ const Reading = (): JSX.Element => {
             <i>Physics from Symmetry</i> by Jakob Schwichtenberg
           </ReadingItem>
           <ReadingItem>
+            <i>Tempo</i> by Venkatesh Rao
+          </ReadingItem>
+          <ReadingItem>
+            <i>Be Slightly Evil</i> by Venkatesh Rao
+          </ReadingItem>
+          <ReadingItem>
+            <i>Crash Early, Crash Often</i> by Venkatesh Rao
+          </ReadingItem>
+          <ReadingItem>
+            <i>Getting Ahead, Getting Along, Getting Away</i> by Venkatesh Rao
+          </ReadingItem>
+          <ReadingItem>
+            <i>The Mysteries of Money</i> by Venkatesh Rao
+          </ReadingItem>
+          <ReadingItem>
             <i>Enemies of Promise</i> by Cyril Connolly
           </ReadingItem>
           <ReadingItem>

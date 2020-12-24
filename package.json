@@ -13,6 +13,7 @@
   "dependencies": {
     "@mdx-js/loader": "^1.6.21",
     "@next/mdx": "^10.0.1",
+    "elevator.js": "^1.0.1",
     "fontsource-source-sans-pro": "^3.0.9",
     "fontsource-source-serif-pro": "^3.0.10",
     "next": "^10.0.1",

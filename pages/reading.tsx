@@ -53,9 +53,17 @@ const Reading = (): JSX.Element => {
           <ReadingItem>
             &quot;Thoughts on Meaning and Writing&quot; by Dormin
           </ReadingItem>
-          <ReadingItem>&quot;If&quot; by Rudyard Kipling</ReadingItem>
           <ReadingItem>
-            &quot;Is Success the Enemy of Freedom?&quot; by Xiaoyu He
+            <Link href="/perma/if">
+              <a>&quot;If&quot;</a>
+            </Link>{" "}
+            by Rudyard Kipling
+          </ReadingItem>
+          <ReadingItem>
+            <Link href="/perma/is-success-the-enemy-of-freedom">
+              <a>&quot;Is Success the Enemy of Freedom?&quot;</a>
+            </Link>{" "}
+            by Xiaoyu He
           </ReadingItem>
         </ReadingList>
 
@@ -175,10 +183,13 @@ const Reading = (): JSX.Element => {
             <i>What Mad Pursuit</i> by Francis Crick
           </ReadingItem>
           <ReadingItem>
-            <i>Imperium: A Novel of Ancient Rome</i> by Robert Harris
+            <i>Imperium, Lustrum, </i>and <i>Dictator</i> by Robert Harris
           </ReadingItem>
           <ReadingItem>
             <i>A Woman in Berlin</i> by Anonymous
+          </ReadingItem>
+          <ReadingItem>
+            &quot;How to Live With Dying&quot; by John Kaag
           </ReadingItem>
           <ReadingItem>
             <Link href="/perma/best-general-advice">
@@ -264,9 +275,6 @@ const Reading = (): JSX.Element => {
               Biology
             </i>{" "}
             by Horace Freeland Judson
-          </ReadingItem>
-          <ReadingItem>
-            <i>Lustrum</i> and <i>Dictator</i> by Robert Harris
           </ReadingItem>
           <ReadingItem>
             <i>The Evolving Self: Problem and Process in Human Development</i>{" "}

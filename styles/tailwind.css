@@ -137,6 +137,10 @@ li > p {
   background-color: #a2a4e2;
 }
 
+.cluster-text {
+  @apply font-extrabold text-lg m-0;
+}
+
 /* SYNTAX HIGHLIGHTING */
 /* FROM: https://github.com/FormidableLabs/prism-react-renderer */
 .code-pre {

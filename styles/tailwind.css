@@ -110,6 +110,33 @@ li > p {
   @apply mb-2;
 }
 
+/* CLUSTERS */
+.cluster {
+  padding: 14px;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.cluster:nth-of-type(6n + 1) {
+  background-color: #cfefaf;
+}
+.cluster:nth-of-type(6n + 2) {
+  background-color: #b5dce8;
+}
+.cluster:nth-of-type(6n + 3) {
+  background-color: #ffc8b2;
+}
+.cluster:nth-of-type(6n + 4) {
+  background-color: #ffe766;
+}
+.cluster:nth-of-type(6n + 5) {
+  background-color: #e16f7c;
+}
+.cluster:nth-of-type(6n + 6) {
+  background-color: #a2a4e2;
+}
+
 /* SYNTAX HIGHLIGHTING */
 /* FROM: https://github.com/FormidableLabs/prism-react-renderer */
 .code-pre {

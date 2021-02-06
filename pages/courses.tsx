@@ -162,6 +162,30 @@ const data: Array<{ sem: string; id: string; name: string; inst: string }> = [
     name: "Politics and Culture in 20th-Century Germany",
     inst: "Isabel Richter",
   },
+  {
+    sem: "Spring 2021",
+    id: "BioEng 104",
+    name: "Biological Transport Phenomena",
+    inst: "Aaron Streets",
+  },
+  {
+    sem: "",
+    id: "CS 162",
+    name: "Operating Systems",
+    inst: "Anthony Joseph and Natacha Crooks",
+  },
+  {
+    sem: "",
+    id: "EECS 127",
+    name: "Optimization Models in Engineering",
+    inst: "Laurent El Ghaoui",
+  },
+  {
+    sem: "",
+    id: "Physics 177",
+    name: "Principles of Molecular Biophysics",
+    inst: "Ahmet Yildiz",
+  },
 ]
 
 const Courses = (): JSX.Element => {

@@ -18,8 +18,8 @@ const Reading = (): JSX.Element => {
         {/* 
           FAVORITES 
         */}
-        <div className="reading-header favorites">
-          <p className="font-extrabold text-lg m-0">Favorites</p>
+        <div className="cluster">
+          <p className="cluster-text">Favorites</p>
         </div>
         <ReadingList>
           <ReadingItem>
@@ -70,8 +70,8 @@ const Reading = (): JSX.Element => {
         {/* 
           NOW READING
         */}
-        <div className="reading-header now-reading">
-          <p className="font-extrabold text-lg m-0">Now Reading</p>
+        <div className="cluster">
+          <p className="cluster-text">Now Reading</p>
         </div>
         <ReadingList>
           <ReadingItem>
@@ -104,8 +104,8 @@ const Reading = (): JSX.Element => {
         {/* 
           ENJOYED
         */}
-        <div className="reading-header enjoyed">
-          <p className="font-extrabold text-lg m-0">Enjoyed</p>
+        <div className="cluster">
+          <p className="cluster-text">Enjoyed</p>
         </div>
         <ReadingList>
           <ReadingItem>&quot;When We Build&quot; by Wilson Miner</ReadingItem>
@@ -222,8 +222,8 @@ const Reading = (): JSX.Element => {
         {/* 
           ANTI-LIBRARY
         */}
-        <div className="reading-header anti-library">
-          <p className="font-extrabold text-lg m-0">Anti-Library</p>
+        <div className="cluster">
+          <p className="cluster-text">Anti-Library</p>
         </div>
         <ReadingList>
           <ReadingItem>

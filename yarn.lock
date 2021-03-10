@@ -2559,16 +2559,6 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
-fontsource-source-sans-pro@^3.0.9:
-  version "3.1.5"
-  resolved "https://registry.yarnpkg.com/fontsource-source-sans-pro/-/fontsource-source-sans-pro-3.1.5.tgz#575edceadf0e68603c1c74b087f4423738cce2f9"
-  integrity sha512-DQDvGj/txs8wcXoym1Ji4EropFphA9mfAP4CgYPOIGvZ3OieP8QQjUlZv9Razy7CmWVvAa6GbOXKbahYfjVs+w==
-
-fontsource-source-serif-pro@^3.0.10:
-  version "3.1.5"
-  resolved "https://registry.yarnpkg.com/fontsource-source-serif-pro/-/fontsource-source-serif-pro-3.1.5.tgz#bb00a4aede9ad16fce637cbf90471d4121cb0b15"
-  integrity sha512-4zgMiT/npFohC7kOT59zraQ90Xd4E+V8iI3XuCCIqPSvIsvupk1l6zSAlyP4aWIgXQTkYvVmJCZqiMlOkO02zA==
-
 for-in@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"

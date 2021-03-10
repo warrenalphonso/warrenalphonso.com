@@ -97,7 +97,6 @@ li > p {
 .cluster {
   padding: 14px;
   text-align: left;
-  font-weight: bold;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -121,7 +120,10 @@ li > p {
 }
 
 .cluster-text {
-  @apply font-extrabold text-lg m-0;
+  @apply text-lg;
+  font-weight: 600;
+  /* Must be one available on Google Fonts and specified in typography.ts */
+  margin-bottom: 10px;
 }
 
 /* SYNTAX HIGHLIGHTING */

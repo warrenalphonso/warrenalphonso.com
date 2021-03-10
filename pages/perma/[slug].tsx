@@ -29,11 +29,11 @@ const Perma = ({ slug }: Props): JSX.Element => {
   const [elevator, setElevator] = useState<Elevator | null>(null)
   // Run on window load
   useEffect(() => {
-    console.log("Creating elevator - only once per page pls")
     setElevator(
       new Elevator({
         mainAudio: "/elevator.mp3",
         endAudio: "/ding.mp3",
+        duration: 5000,
       })
     )
   }, [])

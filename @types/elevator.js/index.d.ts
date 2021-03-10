@@ -3,9 +3,11 @@ declare module "elevator.js" {
     constructor({
       mainAudio,
       endAudio,
+      duration,
     }: {
       mainAudio: string
       endAudio: string
+      duration: number
     }) {}
     elevate: () => void
   }

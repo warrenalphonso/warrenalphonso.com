@@ -11,12 +11,7 @@ const Home = (): JSX.Element => {
       <div className="space-y-8 flex flex-1 flex-col">
         <h1>Welcome</h1>
         <div className="flex flex-col items-center">
-          <img
-            src="/splash.jpg"
-            alt="Berkeley rooftop"
-            width="90%"
-            height="auto"
-          />
+          <img src="/splash.jpg" alt="Berkeley rooftop" height="auto" />
         </div>
         <p>
           My name is Warren Alphonso. Find me on{" "}

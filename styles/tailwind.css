@@ -2,6 +2,17 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/* I like cycling through colors! */
+:root {
+  --one: #cfefaf;
+  --two: #b5dce8;
+  --three: #ffc8b2;
+  --four: #ffe766;
+  --five: #e16f7c;
+  --six: #a2a4e2;
+  --link: #ff9800;
+}
+
 body {
   padding: 10px;
   flex: 1;
@@ -20,12 +31,24 @@ img {
   width: 90%;
 }
 
-a {
-  color: #fb251b;
+/* Fun squiggly line hyperlink hover effect from:
+ * https://css-tricks.com/having-fun-with-link-hover-effects/ 
+ * 
+ * I'm using `main a` to match any `a` that's nested in `main`: don't want to 
+ * style navbar links. 
+ */
+main a {
+  background: linear-gradient(to bottom, var(--link) 0%, var(--link) 100%);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 4px;
+  color: #000;
+  text-decoration: none;
+  transition: background-size 0.2s;
 }
 
-a:hover {
-  @apply underline;
+main a:hover {
+  background-size: 4px 50px;
 }
 
 * {
@@ -61,21 +84,26 @@ a:hover {
 }
 
 .navlinks {
-  @apply text-red-700 pr-6;
+  @apply text-red-700 pr-6 no-underline;
 }
 
 .navlinks:hover {
-  @apply text-pink-400;
+  @apply text-pink-400 line-through;
 }
 
 /* PERMA */
 
 .permalink {
-  @apply pb-8;
+  @apply pb-4;
 }
 
 .permalink-title {
   @apply text-4xl;
+}
+
+.permalink > a,
+.permalink-title > a {
+  @apply pr-8;
 }
 
 .permalink-author {
@@ -101,22 +129,41 @@ li > p {
   margin-bottom: 10px;
 }
 .cluster:nth-of-type(6n + 1) {
-  background-color: #cfefaf;
+  background-color: var(--one);
 }
 .cluster:nth-of-type(6n + 2) {
-  background-color: #b5dce8;
+  background-color: var(--two);
 }
 .cluster:nth-of-type(6n + 3) {
-  background-color: #ffc8b2;
+  background-color: var(--three);
 }
 .cluster:nth-of-type(6n + 4) {
-  background-color: #ffe766;
+  background-color: var(--four);
 }
 .cluster:nth-of-type(6n + 5) {
-  background-color: #e16f7c;
+  background-color: var(--five);
 }
 .cluster:nth-of-type(6n + 6) {
-  background-color: #a2a4e2;
+  background-color: var(--six);
+}
+
+blockquote:nth-of-type(6n + 1) {
+  border-color: var(--one);
+}
+blockquote:nth-of-type(6n + 2) {
+  border-color: var(--two);
+}
+blockquote:nth-of-type(6n + 3) {
+  border-color: var(--three);
+}
+blockquote:nth-of-type(6n + 4) {
+  border-color: var(--four);
+}
+blockquote:nth-of-type(6n + 5) {
+  border-color: var(--five);
+}
+blockquote:nth-of-type(6n + 6) {
+  border-color: var(--six);
 }
 
 .cluster-text {

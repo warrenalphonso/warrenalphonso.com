@@ -1,9 +1,11 @@
 import Typography from "typography"
 import stAnnesTheme from "typography-theme-st-annes"
 
-stAnnesTheme.baseFontSize = "14px" // was 16px.
-// Only downloads a few font weights by default.
+// Here's the default theme style settings:
 // https://github.com/KyleAMathews/typography.js/blob/master/packages/typography-theme-st-annes/src/index.js
+
+stAnnesTheme.baseFontSize = "14px" // was 16px.
+// I like bold being 600 font weight with 14px font size.
 stAnnesTheme.googleFonts = [
   {
     name: "Source Serif Pro",

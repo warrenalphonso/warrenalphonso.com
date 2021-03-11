@@ -22,7 +22,11 @@ const ReadingItem = ({ children, slug }: Props): JSX.Element => {
       <p>
         {children}{" "}
         {slug ? (
-          <a onClick={() => setOpen(!open)} className="cursor-pointer">
+          <a
+            onClick={() => setOpen(!open)}
+            className="cursor-pointer"
+            style={{ background: "none", color: "#fb251b" }}
+          >
             {open ? "[-]" : "[+]"}
           </a>
         ) : null}

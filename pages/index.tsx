@@ -26,6 +26,13 @@ const Home = (): JSX.Element => {
             </a>
           </h3>
         </div>
+        <blockquote>
+          A blogpost written as part of my 3-month mentorship with the{" "}
+          <a href="https://qosf.org/qc_mentorship/">
+            Quantum Open Source Foundation
+          </a>
+          .{" "}
+        </blockquote>
       </div>
     </>
   )

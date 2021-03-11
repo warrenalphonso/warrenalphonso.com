@@ -15,6 +15,15 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   useEffect(() => {
     let counter = Math.floor(Math.random() * numColors)
     $("a").each((i, elem) => {
+      // Remove any "link-" classes so we don't end up at "link-five" which
+      // takes precedence over the rest
+      const classes = $(elem).attr("class")
+      if (classes) {
+        $(elem).removeClass(
+          classes.split(" ").filter((c) => c.indexOf("link-") >= 0)
+        )
+      }
+
       $(elem).addClass("link-" + wordsNums[counter % 6])
       counter += 1
     })

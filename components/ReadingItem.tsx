@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import $ from "jquery"
 import dynamic from "next/dynamic"
 
 import { setColors } from "utils/useColors"
@@ -22,10 +21,10 @@ const ReadingItem = ({ children, slug }: Props): JSX.Element => {
     dynamic(() =>
       import(`content/reading/${slug}.mdx`).then((result) => {
         // Dynamically importing content means running useColors on load doesn't work
-        // on content that was loaded. Instead, run it again after 30ms.
+        // on content that was loaded. Instead, run it again after 10ms.
         setTimeout(() => {
           setColors(`#notes-${slug}`)
-        }, 30)
+        }, 10)
         return result
       })
     )
@@ -43,8 +42,12 @@ const ReadingItem = ({ children, slug }: Props): JSX.Element => {
           </a>
         ) : null}
       </p>
-      {slug && Notes && open ? (
-        <div id={`notes-${slug}`} className="text-sm notes">
+      {slug && Notes ? (
+        <div
+          id={`notes-${slug}`}
+          className="notes"
+          style={{ display: open ? "block" : "none" }}
+        >
           <blockquote style={{ fontSize: 12 }}>
             <Notes />
           </blockquote>

@@ -6,12 +6,10 @@ const wordsNums = ["zero", "one", "two", "three", "four", "five"]
 
 export const aColors = (ancestor = ""): void => {
   let counter = Math.floor(Math.random() * numColors)
-  console.log("HI")
   $(`${ancestor} a`).each((i, elem) => {
     // Remove any "link-" classes so we don't end up at "link-five" which
     // takes precedence over the rest
     const classes = $(elem).attr("class")
-    console.log(elem)
     if (classes) {
       $(elem).removeClass(
         classes.split(" ").filter((c) => c.indexOf("link-") >= 0)
@@ -19,7 +17,6 @@ export const aColors = (ancestor = ""): void => {
     }
 
     $(elem).addClass("link-" + wordsNums[counter % numColors])
-    //   elem.style["color"] = `var(--${wordsNums[counter % numColors]})`
     counter += 1
   })
 }

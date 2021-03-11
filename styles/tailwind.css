@@ -104,14 +104,6 @@ a:hover {
   }
 }
 
-/* .notes a {
-  color: red;
-}
-
-#notes-scott-alexander a {
-  color: blue;
-} */
-
 /* NAVBAR */
 
 .navbar {
@@ -150,7 +142,7 @@ li > p {
 
 .notes * {
   margin-top: 0;
-  @apply mb-2;
+  @apply mb-2 text-sm;
 }
 
 .expander {

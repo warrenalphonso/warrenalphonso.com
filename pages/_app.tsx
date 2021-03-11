@@ -1,12 +1,41 @@
 // _app.tsx overrides Next.js' `App` component to initialize pages:
 // https://nextjs.org/docs/advanced-features/custom-app
 import React, { AppProps } from "next/app"
+import { useEffect } from "react"
+import $ from "jquery"
 
 import Layout from "components/Layout"
 
 import "styles/tailwind.css"
 
+const numColors = 6
+const wordsNums = ["zero", "one", "two", "three", "four", "five"]
+
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
+  useEffect(() => {
+    let counter = Math.floor(Math.random() * numColors)
+    $("a").each((i, elem) => {
+      $(elem).addClass("link-" + wordsNums[counter % 6])
+      counter += 1
+    })
+  })
+
+  useEffect(() => {
+    let counter = Math.floor(Math.random() * numColors)
+    $("blockquote").each((i, elem) => {
+      elem.style["border-color"] = `var(--${wordsNums[counter % 6]})`
+      counter += 1
+    })
+  })
+
+  useEffect(() => {
+    let counter = Math.floor(Math.random() * numColors)
+    $(".cluster").each((i, elem) => {
+      elem.style["background-color"] = `var(--${wordsNums[counter % 6]})`
+      counter += 1
+    })
+  })
+
   return (
     <Layout>
       {/* Katex CDN: https://mdxjs.com/guides/math-blocks */}

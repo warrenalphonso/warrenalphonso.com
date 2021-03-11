@@ -4,12 +4,12 @@
 
 /* I like cycling through colors! */
 :root {
-  --one: #cfefaf;
-  --two: #b5dce8;
-  --three: #ffc8b2;
-  --four: #ffe766;
-  --five: #e16f7c;
-  --six: #a2a4e2;
+  --zero: #cfefaf;
+  --one: #b5dce8;
+  --two: #ffc8b2;
+  --three: #ffe766;
+  --four: #e16f7c;
+  --five: #a2a4e2;
   --link: #ff9800;
 }
 
@@ -31,14 +31,43 @@ img {
   width: 90%;
 }
 
-/* Fun squiggly line hyperlink hover effect from:
+blockquote {
+  @apply py-4;
+}
+
+/* Fun hyperlink hover effect from:
  * https://css-tricks.com/having-fun-with-link-hover-effects/ 
- * 
- * I'm using `main a` to match any `a` that's nested in `main`: don't want to 
- * style navbar links. 
  */
-main a {
-  background: linear-gradient(to bottom, var(--link) 0%, var(--link) 100%);
+.link-zero {
+  background: linear-gradient(to bottom, var(--zero) 0%, var(--zero) 100%);
+}
+
+.link-one {
+  background: linear-gradient(to bottom, var(--one) 0%, var(--one) 100%);
+}
+
+.link-two {
+  background: linear-gradient(to bottom, var(--two) 0%, var(--two) 100%);
+}
+
+.link-three {
+  background: linear-gradient(to bottom, var(--three) 0%, var(--three) 100%);
+}
+
+.link-four {
+  background: linear-gradient(to bottom, var(--four) 0%, var(--four) 100%);
+}
+
+.link-five {
+  background: linear-gradient(to bottom, var(--five) 0%, var(--five) 100%);
+}
+
+.link-zero,
+.link-one,
+.link-two,
+.link-three,
+.link-four,
+.link-five {
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 4px 4px;
@@ -47,7 +76,7 @@ main a {
   transition: background-size 0.2s;
 }
 
-main a:hover {
+a:hover {
   background-size: 4px 50px;
 }
 
@@ -77,18 +106,8 @@ main a:hover {
   @apply flex items-center justify-end flex-wrap pt-4;
 }
 
-@screen md {
-  .navbar {
-    /* padding-right: 30%; */
-  }
-}
-
 .navlinks {
-  @apply text-red-700 pr-6 no-underline;
-}
-
-.navlinks:hover {
-  @apply text-pink-400 line-through;
+  @apply pr-4 mr-4 text-lg;
 }
 
 /* PERMA */
@@ -127,43 +146,6 @@ li > p {
   text-align: left;
   margin-top: 10px;
   margin-bottom: 10px;
-}
-.cluster:nth-of-type(6n + 1) {
-  background-color: var(--one);
-}
-.cluster:nth-of-type(6n + 2) {
-  background-color: var(--two);
-}
-.cluster:nth-of-type(6n + 3) {
-  background-color: var(--three);
-}
-.cluster:nth-of-type(6n + 4) {
-  background-color: var(--four);
-}
-.cluster:nth-of-type(6n + 5) {
-  background-color: var(--five);
-}
-.cluster:nth-of-type(6n + 6) {
-  background-color: var(--six);
-}
-
-blockquote:nth-of-type(6n + 1) {
-  border-color: var(--one);
-}
-blockquote:nth-of-type(6n + 2) {
-  border-color: var(--two);
-}
-blockquote:nth-of-type(6n + 3) {
-  border-color: var(--three);
-}
-blockquote:nth-of-type(6n + 4) {
-  border-color: var(--four);
-}
-blockquote:nth-of-type(6n + 5) {
-  border-color: var(--five);
-}
-blockquote:nth-of-type(6n + 6) {
-  border-color: var(--six);
 }
 
 .cluster-text {

@@ -37,7 +37,10 @@ blockquote {
 
 /* Fun hyperlink hover effect from:
  * https://css-tricks.com/having-fun-with-link-hover-effects/ 
+ * jQuery cycles through these, but I assign <a> here just in-case loading 
+ * takes a while. 
  */
+a,
 .link-zero {
   background: linear-gradient(to bottom, var(--zero) 0%, var(--zero) 100%);
 }
@@ -62,6 +65,7 @@ blockquote {
   background: linear-gradient(to bottom, var(--five) 0%, var(--five) 100%);
 }
 
+a,
 .link-zero,
 .link-one,
 .link-two,
@@ -70,10 +74,10 @@ blockquote {
 .link-five {
   background-position: 0 100%;
   background-repeat: repeat-x;
-  background-size: 4px 4px;
+  background-size: 4px 2px;
   color: #000;
   text-decoration: none;
-  transition: background-size 0.2s;
+  transition: background-size 0.6s;
   @apply px-1;
 }
 
@@ -100,6 +104,14 @@ a:hover {
   }
 }
 
+/* .notes a {
+  color: red;
+}
+
+#notes-scott-alexander a {
+  color: blue;
+} */
+
 /* NAVBAR */
 
 .navbar {
@@ -108,7 +120,7 @@ a:hover {
 }
 
 .navlinks {
-  @apply pr-4 mr-4 text-lg;
+  @apply pr-4 mr-4;
 }
 
 /* PERMA */
@@ -136,9 +148,16 @@ li > p {
   margin-bottom: 0;
 }
 
-.notes > * {
+.notes * {
   margin-top: 0;
   @apply mb-2;
+}
+
+.expander {
+  color: #4497bb;
+  background: none; /* Don't want highlighting like other <a> tags */
+  font-weight: 600;
+  @apply px-2;
 }
 
 /* CLUSTERS */

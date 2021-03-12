@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import dynamic from "next/dynamic"
 
 import { setColors } from "utils/useColors"
@@ -16,20 +16,18 @@ const ReadingItem = ({ children, slug }: Props): JSX.Element => {
       throw new Error(`Path content/reading/${slug}.mdx doesn't exist!`)
     }
   }
-  const Notes =
-    slug &&
-    dynamic(() =>
-      import(`content/reading/${slug}.mdx`).then((result) => {
-        // Dynamically importing content means running useColors on load doesn't work
-        // on content that was loaded. Instead, run it again after 10ms.
-        setTimeout(() => {
-          setColors(`#notes-${slug}`)
-        }, 10)
-        return result
-      })
-    )
+  const Notes = slug && dynamic(() => import(`content/reading/${slug}.mdx`))
 
   const [open, setOpen] = useState(false)
+
+  useEffect(() => {
+    // Dynamically importing content means running useColors on load doesn't
+    // work. setTimeout has a tiny, tiny delay which is necessary for this to
+    // run *after* content is placed so jQuery can find it.
+    setTimeout(() => {
+      setColors(`#notes-${slug}`)
+    })
+  })
 
   return (
     <li>
@@ -46,9 +44,10 @@ const ReadingItem = ({ children, slug }: Props): JSX.Element => {
         <div
           id={`notes-${slug}`}
           className="notes"
+          // Load all posts on initial page load because jQuery is annoying
           style={{ display: open ? "block" : "none" }}
         >
-          <blockquote style={{ fontSize: 12 }}>
+          <blockquote>
             <Notes />
           </blockquote>
         </div>

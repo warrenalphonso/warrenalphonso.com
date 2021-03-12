@@ -142,7 +142,7 @@ li > p {
 
 .notes * {
   margin-top: 0;
-  @apply mb-2 text-sm;
+  @apply mb-2 text-base bg-white bg-opacity-50 leading-loose;
 }
 
 .expander {

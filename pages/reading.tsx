@@ -32,7 +32,7 @@ const Reading = (): JSX.Element => {
           <ReadingItem>
             <i>Shoe Dog</i> by Phil Knight
           </ReadingItem>
-          <ReadingItem>
+          <ReadingItem slug="way-to-love">
             <i>The Way to Love</i> by Anthony De Mello
           </ReadingItem>
           <ReadingItem slug="scott-alexander">

@@ -45,9 +45,9 @@ const Perma = ({ slug }: Props): JSX.Element => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <p className="permalink-title">
+        <h1 className="permalink-title">
           <a href={url}>{title}</a>
-        </p>
+        </h1>
         <div className="flex items-end justify-between">
           <p className="permalink-author float-left">by {author}</p>
           <p>Date accessed: {dateAccessed}</p>

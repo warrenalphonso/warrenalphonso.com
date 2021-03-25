@@ -4,7 +4,6 @@ import stAnnesTheme from "typography-theme-st-annes"
 // Here's the default theme style settings:
 // https://github.com/KyleAMathews/typography.js/blob/master/packages/typography-theme-st-annes/src/index.js
 
-stAnnesTheme.baseFontSize = "14px" // was 16px.
 // I like bold being 600 font weight with 14px font size.
 stAnnesTheme.googleFonts = [
   {

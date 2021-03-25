@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-import React from "react"
+import React, { useEffect } from "react"
 import Head from "next/head"
 import { GetStaticPaths, GetStaticProps } from "next"
 import dynamic from "next/dynamic"
 import fs from "fs"
 
 import { Frontmatter } from "types/Project.types"
+import { setColors } from "utils/useColors"
 
 type Props = {
   slug: string
@@ -20,13 +21,25 @@ const Project = ({ slug }: Props): JSX.Element => {
     throw new Error(`Path content/projects/${slug}.mdx doesn't exist!`)
   }
   const Content = dynamic(() => import(`content/projects/${slug}.mdx`))
+
+  useEffect(() => {
+    // Dynamically importing content means running useColors on load doesn't
+    // work. setTimeout has a tiny, tiny delay which is necessary for this to
+    // run *after* content is placed so jQuery can find it.
+    setTimeout(() => {
+      setColors(`#project-${slug}`)
+    })
+  })
+
   return (
     <>
       <Head>
         <title>{title} | Warren Alphonso</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Content />
+      <div id={`project-${slug}`}>
+        <Content />
+      </div>
     </>
   )
 }

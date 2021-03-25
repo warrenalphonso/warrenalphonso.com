@@ -20,19 +20,21 @@ const Home = (): JSX.Element => {
         </p>
         <div className="space-y-0">
           <h2>Projects</h2>
-          <h3>
-            <a href="https://warrenalphonso.github.io/qc/hubbard">
-              Investigating the Hubbard model with variational algorithms
-            </a>
-          </h3>
+          <div>
+            <h3>
+              <a href="https://warrenalphonso.github.io/qc/hubbard">
+                Investigating the Hubbard model with variational algorithms
+              </a>
+            </h3>
+            <blockquote>
+              A blogpost written as part of my 3-month mentorship with the{" "}
+              <a href="https://qosf.org/qc_mentorship/">
+                Quantum Open Source Foundation
+              </a>
+              .
+            </blockquote>
+          </div>
         </div>
-        <blockquote>
-          A blogpost written as part of my 3-month mentorship with the{" "}
-          <a href="https://qosf.org/qc_mentorship/">
-            Quantum Open Source Foundation
-          </a>
-          .{" "}
-        </blockquote>
       </div>
     </>
   )

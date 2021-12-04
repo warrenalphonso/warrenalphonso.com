@@ -180,12 +180,6 @@ const data: Array<{ sem: string; id: string; name: string; inst: string }> = [
     name: "Optimization Models in Engineering",
     inst: "Laurent El Ghaoui",
   },
-  {
-    sem: "",
-    id: "Physics 177",
-    name: "Principles of Molecular Biophysics",
-    inst: "Ahmet Yildiz",
-  },
 ]
 
 const Courses = (): JSX.Element => {
@@ -206,7 +200,7 @@ const Courses = (): JSX.Element => {
       <div>
         <h1>Courses</h1>
         <p>
-          I study Electrical Engineering and Computer Science at UC Berkeley. Go
+          I studied Electrical Engineering and Computer Science at UC Berkeley. Go
           bears!
         </p>
         <table {...getTableProps()}>

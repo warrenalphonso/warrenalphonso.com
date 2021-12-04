@@ -30,6 +30,7 @@
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
     "suppressImplicitAnyIndexErrors": true,
+    "incremental": true
   },
   // According to https://www.typescriptlang.org/tsconfig#include, not 
   // specifying file extension means onlny .ts, .tsx, and .d.ts are allowed, 

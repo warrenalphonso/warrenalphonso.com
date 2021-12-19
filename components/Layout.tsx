@@ -15,11 +15,12 @@ const Layout = ({ children }: Props): JSX.Element => {
       <header>{<Header />}</header>
       {/* For syntax highlighting: https://mdxjs.com/guides/syntax-highlighting */}
       <MDXProvider
-        components={{
-          code: function code(props) {
-            return <CodeBlock {...props} />
-          },
-        }}
+      // TODO: Fix this if I ever need syntax highlighting
+      // components={{
+      //   code: function code(props) {
+      //     return <CodeBlock {...props} />
+      //   },
+      // }}
       >
         <main>{children}</main>
       </MDXProvider>

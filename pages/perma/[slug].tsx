@@ -13,12 +13,8 @@ type Props = {
 }
 
 const Perma = ({ slug }: Props): JSX.Element => {
-  const {
-    title,
-    author,
-    dateAccessed,
-    url,
-  } = require(`content/perma/${slug}.mdx`).metadata as Frontmatter
+  const { title, author, dateAccessed, url } =
+    require(`content/perma/${slug}.mdx`).metadata as Frontmatter
   try {
     require(`content/perma/${slug}.mdx`)
   } catch (err) {
@@ -85,7 +81,7 @@ export default Perma
 
 export const getStaticProps: GetStaticProps = async (context) => {
   if (context.params) {
-    const { slug } = context?.params
+    const { slug } = context.params
     return {
       props: {
         slug,

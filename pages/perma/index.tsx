@@ -50,12 +50,8 @@ export const getStaticProps: GetStaticProps = async () => {
   // Get metadata too
   const permas = slugs
     .map((slug) => {
-      const {
-        title,
-        author,
-        dateAccessed,
-        url,
-      } = require(`content/perma/${slug}.mdx`).metadata as Frontmatter
+      const { title, author, dateAccessed, url } =
+        require(`content/perma/${slug}.mdx`).metadata as Frontmatter
       return { title, author, dateAccessed, url, slug }
     })
     .sort((a, b) => {

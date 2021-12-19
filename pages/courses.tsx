@@ -183,13 +183,8 @@ const data: Array<{ sem: string; id: string; name: string; inst: string }> = [
 ]
 
 const Courses = (): JSX.Element => {
-  const {
-    getTableProps,
-    getTableBodyProps,
-    headerGroups,
-    rows,
-    prepareRow,
-  } = useTable<Class>({ columns, data })
+  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
+    useTable<Class>({ columns, data })
 
   return (
     <>
@@ -200,8 +195,8 @@ const Courses = (): JSX.Element => {
       <div>
         <h1>Courses</h1>
         <p>
-          I studied Electrical Engineering and Computer Science at UC Berkeley. Go
-          bears!
+          I studied Electrical Engineering and Computer Science at UC Berkeley.
+          Go bears!
         </p>
         <table {...getTableProps()}>
           <thead>

@@ -48,7 +48,7 @@ export default Project
 
 export const getStaticProps: GetStaticProps = async (context) => {
   if (context.params) {
-    const { slug } = context?.params
+    const { slug } = context.params
     return {
       props: {
         slug,

@@ -12,6 +12,9 @@ const Header = (): JSX.Element => {
       <Link href="/courses">
         <a className="navlinks">Courses</a>
       </Link>
+      <Link href="/reading">
+        <a className="navlinks">Reading</a>
+      </Link>
     </nav>
   )
 }
